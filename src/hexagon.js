@@ -49,13 +49,15 @@ export default class Hexagon extends Component {
 		
 		const hexagon = (
 			<React.Fragment>
-				<path fill={fill} d={generateHexSVG(sideLength, borderRadius)} />
-				<image href={img} width={500px} height={200px} x={0.15 * width} y={0.12 * height} />
-				<text fill="#bbb" strokeWidth="0" style={textStyle}>
-					<tspan x={width/2} y={height/2 + fontSizeOffset} textAnchor="middle">
-						{text}
-					</tspan>
-				</text>
+				<image href={img} styles={{objectFit: "cover"}} width={width} height={height} x={0.15 * width} y={0.12 * height}>
+					<path fill={fill} d={generateHexSVG(sideLength, borderRadius)} />
+
+					<text fill="#bbb" strokeWidth="0" style={textStyle}>
+						<tspan x={width/2} y={height/2 + fontSizeOffset} textAnchor="middle">
+							{text}
+						</tspan>
+					</text>
+				</image>
 			</React.Fragment>)
 
 		return (
