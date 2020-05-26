@@ -50,7 +50,7 @@ export default class Hexagon extends Component {
 		const hexagon = (
 			<React.Fragment>
 				<path fill={fill} d={generateHexSVG(sideLength, borderRadius)} />
-				<image href={img} width={width*1.5} height={height*1.5} x={0.15 * width} y={0.12 * height} />
+				<image href={img} width={width*10} height={height*10} x={0.15 * width} y={0.12 * height} />
 				<text fill="#bbb" strokeWidth="0" style={textStyle}>
 					<tspan x={width/2} y={height/2 + fontSizeOffset} textAnchor="middle">
 						{text}
